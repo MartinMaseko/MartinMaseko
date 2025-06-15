@@ -6,7 +6,7 @@ import About from "../assets/AboutMe.png";
 import resume from "../assets/resume.png";
 import services from "../assets/services.png";
 import projects from "../assets/projects.png";
-import mobilevideo from "../assets/homemobile.mp4";
+import mobilegif from "../assets/homemobile.gif";
 import pcvideo from "../assets/homePC.mp4";
 
 function Main() {
@@ -52,9 +52,7 @@ function Main() {
             <NavBar />
             <div className="main">
                 <div className="heading-container">
-                    <video autoPlay loop muted className="mobile-video">
-                        <source src={mobilevideo} type="video/mp4" />
-                    </video>
+                    <img src={mobilegif} alt="Mobile Animation" className="mobile-gif" />
                     <video autoPlay loop muted className="pc-video">
                         <source src={pcvideo} type="video/mp4" />
                     </video>

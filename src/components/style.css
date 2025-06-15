@@ -25,11 +25,10 @@ nav {
     box-shadow: 0 0 16px rgba(0,0,0,0.10); 
 }
 
-.mobile-video {
+.mobile-gif {
     width: 100%;
     height: auto;
     object-fit: cover;
-    z-index: -1; /* Ensure the video is behind other content */
 }
 
 .pc-video {
@@ -44,7 +43,7 @@ nav {
 
 
 @media (min-width: 900px) {
-    .mobile-video {
+    .mobile-gif {
         display: none; 
     }
     .pc-video {
