@@ -8,6 +8,9 @@ import services from "../assets/services.png";
 import projects from "../assets/projects.png";
 import mobilegif from "../assets/homemobile.gif";
 import pcvideo from "../assets/homePC.mp4";
+import soccerImg from "../assets/soccer.png";
+import tapeImg from "../assets/tape.png";
+import castImg from "../assets/cast.png";
 
 function Main() {
     const [openSection, setOpenSection] = useState(null);
@@ -17,8 +20,118 @@ function Main() {
             key: "about",
             img: About,
             alt: "About Me",
-            title: "About Me",
-            content: "Brief description about me."
+            title: "Your Digital Growth Partner",
+            content: <p>As a seasoned entrepreneur with 12 years of experience and adiverse background spanning wholesale, 
+                government projects, and direct B2B sales, I bring a unique blend of street-smart 
+                business acumen and cutting-edge digital expertise to the table. 
+                My journey began straight out of high school, building a hair product 
+                wholesale business that supplied over 500 salons in the township – a testament 
+                to my innate understanding of market needs and scalable operations.<br></br><br></br> 
+                I then transitioned to managing a significant government project for the Department of Human Settlements, 
+                where I honed my skills in project management, data integrity, and community engagement, 
+                even training local staff on specialized software. This was followed by a successful venture 
+                in direct sales, supplying township spaza shops and perfecting my approach to 
+                business-to-business sales.<br></br><br></br>My entrepreneurial drive has always been fueled by my passion to fund my music career.
+                Later I produced two kwaito albums and Hip Hop E.p including selling instrumentals online I delved into the music industry 
+                as an artist "Staxx Luciano", Sound engineer & producer and manager running artist marketing campaigns & events.<br></br><br></br>
+                This pursuit led me to deeply explore the intersection of technology and the music industry, 
+                from the evolution of music consumption to the power of digital platforms. 
+                This curiosity sparked a career pivot, where I leveraged my natural entrepreneurial skills and 
+                acquired extensive knowledge in social media marketing , web analytics , and more recently, full-stack development.<br></br><br></br>
+                This diverse practical experience and continuous learning enable me to see the bigger picture. 
+                I can quickly assess your business, identify the most impactful tech tools and resources to 
+                boost efficiency and revenue, and strategize how to effectively drive traffic. 
+                What truly sets me apart is my ability to dive into your data, refining strategies for 
+                optimal results.<br></br><br></br> I'm passionate about SaaS solutions, the transformative power of music 
+                industry technology, and empowering SME businesses to thrive in today's rapidly evolving 
+                digital landscape. Let's unlock your business's full potential together.</p>
+        },
+        {
+            key: "services",
+            img: services,
+            alt: "Services",
+            content: <div className="services-content">
+                        <div className="services-text">
+                            <div className="service-icon">
+                                <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/programming.png" alt="programming"/>
+                                <h3 className="service-headings">Website Design & Development</h3>
+                            </div>
+                            <p>Launch Your Online Presence, Effortlessly. I design and build professional, 
+                                user-friendly websites without the High Cost. Get a custom-designed, simple 
+                                yet effective website that clearly communicates your value and connects with your audience, 
+                                all within your budget.</p>
+                        </div>
+                        <div className="services-text">
+                            <div className="service-icon">
+                                <img width="94" height="94" src="https://img.icons8.com/external-flaticons-flat-flat-icons/94/external-saas-big-data-flaticons-flat-flat-icons.png" alt="external-saas-big-data-flaticons-flat-flat-icons"/>
+                                <h3 className="service-headings">Saas Solutions</h3>
+                            </div>
+                            <p>Elevate Your Business with Smart SaaS Solutions. I'll connect you with the right cloud-based tools to automate tasks, 
+                                streamline operations, and drive growth, without the complexity of enterprise systems. 
+                                Your simple website, empowered by intelligent software.</p>
+                        </div>
+                        <div className="services-text">
+                            <div className="service-icon">
+                                <img width="94" height="94" src="https://img.icons8.com/external-flaticons-flat-flat-icons/94/external-web-analytics-ux-and-ui-flaticons-flat-flat-icons.png" alt="external-web-analytics-ux-and-ui-flaticons-flat-flat-icons"/>
+                                <h3 className="service-headings">Web Analytics Setup & Reporting</h3>
+                            </div>
+                            <p>Stop Guessing, Start Growing. I don't just track data; I transform it into actionable insights. Through meticulous Web Analytics Setup & Reporting, 
+                                I uncover precisely how users interact with your site, allowing me to refine strategies and web applications that directly boost your traffic, 
+                                enhance user experience, and drive measurable revenue.</p>
+                        </div>
+                        <div className="services-text">
+                            <div className="service-icon">
+                                <img width="94" height="94" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/94/external-social-media-marketing-digital-nomad-flaticons-lineal-color-flat-icons-2.png" alt="external-social-media-marketing-digital-nomad-flaticons-lineal-color-flat-icons-2"/>
+                                <h3 className="service-headings">Social Media Strategy & Marketing</h3>
+                            </div>
+                            <p>Beyond Posts: I'll architect your Social Media success with a smart strategy and the right technology. 
+                                I'll guide you to and implement the ideal web tools, resources, and platforms that align with your 
+                                unique business goals, ensuring every social effort translates into measurable growth and results.</p>
+                        </div>
+                    </div>
+        },
+        {
+            key: "projects",
+            img: projects,
+            alt: "Projects",
+            title: "SaaS Products",
+            content: <div className="projects-content">
+                        <div className="projects">
+                            <div className="projects-heading">
+                                <img src={soccerImg} alt="Football Club Management System" className="projects-image" />
+                                <h3 className="projects-heading">Football Club Management System</h3>
+                            </div>
+                            <p>A centralized platform for football clubs to manage their operations efficiently.<br></br>
+                                It offers features such as club information, membership benefits, 
+                                secure login for managers and players, player dashboards, communication tools, 
+                                scheduling of events, and management dashboards.<br></br> The app streamlines communication, 
+                                record-keeping, and club management, making it easier for clubs to organize activities and 
+                                engage with their members.</p>
+                        </div>
+                        <div className="projects">
+                            <div className="projects-heading">
+                                <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
+                                <h3 className="projects-heading">Artist/Band Website Generator</h3>
+                            </div>
+                            <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
+                                professional web pages.<br></br> Artists can showcase music videos, albums, and press kits, update their 
+                                profiles, and share streaming links—all without needing coding skills. <br></br>
+                                The app also provides secure login, admin dashboards, and tools for uploading and organizing content,
+                                 making it simple for artists to promote their work and connect with fans online.</p>
+                        </div>
+                        <div className="projects">
+                            <div className="projects-heading">
+                                <img src={castImg} alt="cast-solutions" className="projects-image" />
+                                <h3 className="projects-heading">Cast Solutions</h3>
+                            </div>
+                            <p>Cast Solutions is a web application that helps casting agencies and talent managers organize auditions, 
+                                manage talent submissions, and streamline the casting process.<br></br> The platform allows you to create and 
+                                manage audition lists, receive detailed talent submissions (including images and videos), 
+                                mark favorites, and easily share or present shortlisted candidates. <br></br>
+                                With secure authentication and a user-friendly interface, Cast Solutions simplifies audition 
+                                management and enhances collaboration between agencies and talent.</p>
+                        </div>
+                    </div>
         },
         {
             key: "resume",
@@ -26,20 +139,6 @@ function Main() {
             alt: "Resume",
             title: "Resume",
             content: "My professional experience and education."
-        },
-        {
-            key: "services",
-            img: services,
-            alt: "Services",
-            title: "Services",
-            content: "What I can offer."
-        },
-        {
-            key: "projects",
-            img: projects,
-            alt: "Projects",
-            title: "Projects",
-            content: "Some of my work."
         }
     ];
 
@@ -69,7 +168,7 @@ function Main() {
                         {openSection === section.key && (
                             <div className="section-text">
                                 <h2>{section.title}</h2>
-                                <p>{section.content}</p>
+                                    {section.content}
                             </div>
                         )}
                     </div>
