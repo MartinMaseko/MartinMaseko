@@ -93,7 +93,8 @@ nav {
 }
 
 .github-icon:hover,
-.linkedin-icon:hover {
+.linkedin-icon:hover,
+.footer-icon:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
@@ -107,7 +108,7 @@ nav {
 .footer-container {
     background-color: #545454;
     color: white;
-    padding: 20px;
+    padding: 50px;
     gap: 20px;
     display: flex;
     align-items: center;
