@@ -11,6 +11,7 @@ import pcvideo from "../assets/homePC.mp4";
 import soccerImg from "../assets/soccer.png";
 import tapeImg from "../assets/tape.png";
 import castImg from "../assets/cast.png";
+import resumeimg from "../assets/resumeimg.JPG";
 
 function Main() {
     const [openSection, setOpenSection] = useState(null);
@@ -21,7 +22,7 @@ function Main() {
             img: About,
             alt: "About Me",
             title: "Your Digital Growth Partner",
-            content: <p>As a seasoned entrepreneur with 12 years of experience and adiverse background spanning wholesale, 
+            content: <p>As a seasoned entrepreneur with 12 years of experience and a diverse background spanning from wholesale, 
                 government projects, and direct B2B sales, I bring a unique blend of street-smart 
                 business acumen and cutting-edge digital expertise to the table. 
                 My journey began straight out of high school, building a hair product 
@@ -85,7 +86,7 @@ function Main() {
                                 <h3 className="service-headings">Social Media Strategy & Marketing</h3>
                             </div>
                             <p>Beyond Posts: I'll architect your Social Media success with a smart strategy and the right technology. 
-                                I'll guide you to and implement the ideal web tools, resources, and platforms that align with your 
+                                I'll guide you to implement the ideal web tools, resources, and platforms that align with your 
                                 unique business goals, ensuring every social effort translates into measurable growth and results.</p>
                         </div>
                     </div>
@@ -98,7 +99,9 @@ function Main() {
             content: <div className="projects-content">
                         <div className="projects">
                             <div className="projects-heading">
-                                <img src={soccerImg} alt="Football Club Management System" className="projects-image" />
+                                <a href="https://napoliclubbapp.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                    <img src={soccerImg} alt="Football Club Management System" className="projects-image" />
+                                </a>
                                 <h3 className="projects-heading">Football Club Management System</h3>
                             </div>
                             <p>A centralized platform for football clubs to manage their operations efficiently.<br></br>
@@ -110,7 +113,9 @@ function Main() {
                         </div>
                         <div className="projects">
                             <div className="projects-heading">
-                                <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
+                                <a href="https://tapedeck.netlify.app/staxxluciano" target="_blank" rel="noopener noreferrer">
+                                    <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
+                                </a>
                                 <h3 className="projects-heading">Artist/Band Website Generator</h3>
                             </div>
                             <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
@@ -121,7 +126,9 @@ function Main() {
                         </div>
                         <div className="projects">
                             <div className="projects-heading">
-                                <img src={castImg} alt="cast-solutions" className="projects-image" />
+                                <a href="https://cast-solutions.netlify.app/login" target="_blank" rel="noopener noreferrer">
+                                    <img src={castImg} alt="cast-solutions" className="projects-image" />
+                                </a>
                                 <h3 className="projects-heading">Cast Solutions</h3>
                             </div>
                             <p>Cast Solutions is a web application that helps casting agencies and talent managers organize auditions, 
@@ -138,7 +145,123 @@ function Main() {
             img: resume,
             alt: "Resume",
             title: "Resume",
-            content: "My professional experience and education."
+            content: <div className="resume-content">
+                <img src={resumeimg} alt="Resume" className="resume-image" />
+                <div className="resume-icons">
+                    <a href="https://github.com/MartinMaseko" target="_blank" rel="noopener noreferrer">
+                        <img width="45" height="45" src="https://img.icons8.com/3d-fluency/45/github-logo.png" alt="github-logo" className="github-icon"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/martin-maseko-a76762367/" target="_blank" rel="noopener noreferrer">
+                        <img width="45" height="45" src="https://img.icons8.com/3d-fluency/45/linkedin--v2.png" alt="linkedin--v2" className="linkedin-icon"/>
+                    </a>
+                </div>
+                        <h3>PROFILE</h3>
+                        <p>Driven and adaptive professional with 12 years of
+                            entrepreneurial experience,
+                            now successfully transitioning into software development. My
+                            extensive entrepreneurial experience has cultivated
+                            exceptional problem-solving, sales acumen, communication,
+                            and project management
+                            capabilities, enabling me to contribute effectively as an
+                            intrapreneur within an organization.
+                        </p>
+                        <h3>EDUCATION</h3>
+                        <h4>Software Engineering | Mar 2024 - Nov 2024</h4>
+                        <p>HyperionDev</p>
+                        <h4>Front-End Development | Dec 2024 - May 2025</h4>
+                        <p>Scrimba</p>
+                        <h4>Social Media Marketing | Apr 2019 - Mar 2020</h4>
+                        <p>Digital School of Marketing</p>
+                        <h4>Web analytics | Feb 2016 - Nov 2017</h4>
+                        <p>Simplilearn</p>
+                        <h4>National Senior Certificate | 2013</h4>
+                        <p>Abbotts College</p>
+                        <h3>Skills</h3>
+                        <div className="skills-container">
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/3d-fluency/45/source-code.png" alt="source-code"/>
+                                <p>HTML</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/javascript--v1.png" alt="javascript--v1"/>
+                                <p>JavaScript</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/45/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"/>
+                                <p>React</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/typescript--v1.png" alt="typescript--v1"/>
+                                <p>TypeScript</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/css3.png" alt="css3"/>
+                                <p>CSS</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/node-js.png" alt="node-js"/>
+                                <p>Node.js</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/ios/45/api-settings.png" alt="api-settings"/>
+                                <p>RESTful API</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/python--v1.png" alt="python--v1"/>
+                                <p>Python</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/45/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" alt="external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo"/>
+                                <p>Django</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/external-soft-fill-juicy-fish/45/external-dev-coding-and-development-soft-fill-soft-fill-juicy-fish.png" alt="external-dev-coding-and-development-soft-fill-soft-fill-juicy-fish"/>
+                                <p>DevOps & Cloud</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/github.png" alt="github"/>
+                                <p>GitHub</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/docker.png" alt="docker"/>
+                                <p>Docker</p>
+                            </div>
+                        </div>
+                        <h3>Experience</h3>
+                        <div className="experience-container">
+                            <div className="experience-item">
+                                <h4>Sales & Business Operations Manager | 2013 - 2016</h4>
+                                <p>Successfully scaled a Hair products wholesale
+                                    business, serving over 500 salons. I'm adept at
+                                    inventory management, optimizing sales, and
+                                    leading small teams and translating complex
+                                    business needs into actionable, profitable strategies.
+                                    HerrKhonact (Pty) Ltd
+                                </p>
+                            </div>
+                            <div className="experience-item">
+                                <h4>Training & Project Coordinator | 2016 - 2017 </h4>
+                                <p>Conducted occupancy audits (verification of rightful
+                                    owners of RDP houses in various
+                                    townships a project by the Department of Human
+                                    Settlements. I delivered training to local community
+                                    staff, training them on using software provided for
+                                    accurate occupant detail recording
+                                    Operation McD Solutions (Pty) Ltd.
+                                </p>
+                            </div>
+                            <div className="experience-item">
+                                <h4>Music Production & Sound Engineering | 2018 - 2023 </h4>
+                                <p>Managed and operated a successful recording
+                                    studio, delivering professional music production
+                                    services including recording, mixing, and mastering
+                                    for diverse artists. I also provided digital marketing
+                                    services to artists & sold Instrumentals online
+                                    generating over R50K in 2023.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
         }
     ];
 
@@ -146,9 +269,17 @@ function Main() {
         setOpenSection(openSection === key ? null : key);
     };
 
+    // Add this function to handle menu clicks from NavBar
+    const handleMenuClick = (key) => {
+        setOpenSection(key);
+        // Scroll to the section
+        const el = document.getElementById(key);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <>
-            <NavBar />
+            <NavBar onMenuClick={handleMenuClick} />
             <div className="main">
                 <div className="heading-container">
                     <img src={mobilegif} alt="Mobile Animation" className="mobile-gif" />
@@ -157,7 +288,7 @@ function Main() {
                     </video>
                 </div>
                 {sections.map(section => (
-                    <div className="container" key={section.key}>
+                    <div className="container" key={section.key} id={section.key}>
                         <img
                             src={section.img}
                             alt={section.alt}
@@ -168,7 +299,7 @@ function Main() {
                         {openSection === section.key && (
                             <div className="section-text">
                                 <h2>{section.title}</h2>
-                                    {section.content}
+                                {section.content}
                             </div>
                         )}
                     </div>

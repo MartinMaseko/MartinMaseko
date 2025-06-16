@@ -77,6 +77,89 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 
+.resume-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 16px rgba(0,0,0,0.50);
+}
+
+.resume-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.github-icon:hover,
+.linkedin-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.footer-container {
+    background-color: #545454;
+    color: white;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 16px rgba(0,0,0,0.35);
+}
+
+.footer-container a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 100;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 1em;
+    color: #343a40;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+
+.dropdown-menu button:hover {
+    background: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
 
 @media (min-width: 900px) {
     .mobile-gif {
@@ -93,9 +176,23 @@ nav {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    .projects-content {
+    .projects-content,
+    .experience-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+        padding:30px;
     }
 }
