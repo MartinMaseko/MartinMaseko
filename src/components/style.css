@@ -158,6 +158,20 @@ nav {
     border: none;
     background-color: #1a1a1a;
     border-bottom: 1px solid #ccc;
+    color: whitesmoke;
+    -webkit-text-fill-color: whitesmoke;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.contact-section input:-webkit-autofill,
+.contact-section input:-webkit-autofill:focus,
+.contact-section input:-webkit-autofill:hover,
+.contact-section input:-webkit-autofill:active {
+    -webkit-text-fill-color: whitesmoke !important;
+    box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+    background-color: #1a1a1a !important;
+    color: whitesmoke !important;
+    border-bottom: 1px solid #ccc;
 }
 
 .contact-section textarea {
