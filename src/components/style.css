@@ -18,6 +18,7 @@ nav {
 .Navlogo {
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .mobile-banner {
@@ -162,6 +163,203 @@ nav {
     font-weight: bold;
 }
 
+.cast-page {
+    margin-top: 10px;
+    padding: 0px 20px;
+}
+
+.cast-nav-button {
+    border: none;
+    background-color: #545454;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.cast-nav-button:hover {
+    background-color: #C52727;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.cast-banner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.cast-logo {
+    width: 150px;
+    height: auto;
+}
+
+.cast-banner {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.cast-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.cast-banner-text {
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    z-index: 2;
+}
+
+.features-container {
+    padding-top: 20px;
+}
+
+.features-container h3 {
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px;
+}
+
+.features-container {
+    position: relative;
+    margin-top: 10px;
+    background: #8E0E00;  
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  
+    background: linear-gradient(to right, #1F1C18, #8E0E00); 
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.product-mockup {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+    gap: 10px;
+}
+
+.product-description {
+    max-width: 100%;
+    text-align: center;
+}
+
+.product-title {
+    color: #C52727;
+}
+
+.product-description p {
+    text-align: start;
+}
+
+
+.cta-title {
+    color: #C52727;
+    text-align: center;
+    font-size: 24px;
+}
+
+.product-description {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.product-description.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-mockup {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.7s, transform 0.7s;
+}
+.product-description.visible .product-mockup {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product-title-container {
+    opacity: 0;
+    transition: opacity 0.9s 0.2s;
+}
+.product-description.visible .product-title-container {
+    opacity: 1;
+}
+
+.cta-button {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #C52727;
+    transform: scale(1.05);
+}
+
+.cta-offer {
+    padding: 20px;
+    max-width: 250px;
+    height: fit-content;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cta-offer h4 {
+    color: #C52727;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+.cta-offer li {
+    margin: 10px 0;
+    text-align: start;
+}
+
 
 @media (min-width: 900px) {
     .mobile-gif {
@@ -197,4 +395,21 @@ nav {
         align-items: center;
         padding:30px;
     }
+
+    .cast-logo {
+        width: 600px;
+        height: auto;
+    }
+
+    .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .cta-containers {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
 }

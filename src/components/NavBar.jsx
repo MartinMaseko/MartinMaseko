@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import Logo from "../assets/MMLogo512.webp";
 
@@ -16,7 +17,9 @@ function NavBar({ onMenuClick }) {
 
     return (
         <nav className="navbar">
-            <img src={Logo} alt="Logo" className="Navlogo" />
+            <Link to="/" className="nav-link">
+                <img src={Logo} alt="Logo" className="Navlogo" />
+            </Link>
             <div className="menu-wrapper">
                 <img
                     width="35"
