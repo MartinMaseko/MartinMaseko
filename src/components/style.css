@@ -107,24 +107,78 @@ nav {
 }
 
 .footer-container {
-    background-color: #545454;
+    background-color: #1a1a1a;
     color: white;
-    padding: 50px;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 16px rgba(0,0,0,0.35);
-    padding-bottom: 50px;
+    padding: 0 20px 50px 0px;
 }
 
-.footer-container a {
-    color: white;
-    text-decoration: none;
+.footer-contact {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-text {
     display: flex;
+    justify-content: start;
     align-items: center;
-    gap: 10px;
-    font-size: 12px;
+    padding: 10px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.contact-section h1,
+.contact-section h3 {
+    color: #C52727;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section h3 {
+    color: whitesmoke;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section input[type="tel"],
+.contact-section textarea  {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-section textarea {
+   height: 100px;
+   resize: none;
+}
+
+#contactform-submitbtn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#contactform-submitbtn:hover {
+    background-color: #C52727;
+    transform: scale(1.05);
 }
 
 .menu-wrapper {
@@ -340,14 +394,27 @@ nav {
     transform: scale(1.05);
 }
 
+.cta-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 .cta-offer {
     padding: 20px;
-    max-width: 250px;
+    width: 100%;
     height: fit-content;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     text-align: center;
     margin-bottom: 50px;
+}
+
+.cta-offer:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
 
 .cta-offer h4 {
@@ -395,6 +462,11 @@ nav {
         align-items: center;
         padding:30px;
     }
+    .footer-contact {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
     .cast-logo {
         width: 600px;
@@ -408,6 +480,7 @@ nav {
 
     .cta-containers {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
