@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
@@ -99,6 +100,33 @@ function Main() {
             content: <div className="projects-content">
                         <div className="projects">
                             <div className="projects-heading">
+                                <Link to="/cast-solutions">
+                                    <img src={castImg} alt="cast-solutions" className="projects-image" />
+                                </Link>
+                                <h3 className="projects-heading">Cast Solutions</h3>
+                            </div>
+                            <p>Cast Solutions is a web application that helps casting agencies and talent managers organize auditions, 
+                                manage talent submissions, and streamline the casting process.<br></br> The platform allows you to create and 
+                                manage audition lists, receive detailed talent submissions (including images and videos), 
+                                mark favorites, and easily share or present shortlisted candidates. <br></br>
+                                With secure authentication and a user-friendly interface, Cast Solutions simplifies audition 
+                                management and enhances collaboration between agencies and talent.</p>
+                        </div>
+                        <div className="projects">
+                            <div className="projects-heading">
+                                <Link to="/tapedeck">
+                                    <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
+                                </Link>
+                                <h3 className="projects-heading">Artist/Band Website Generator</h3>
+                            </div>
+                            <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
+                                professional web pages.<br></br> Artists can showcase music videos, albums, and press kits, update their 
+                                profiles, and share streaming links—all without needing coding skills. <br></br>
+                                The app also provides secure login, admin dashboards, and tools for uploading and organizing content,
+                                 making it simple for artists to promote their work and connect with fans online.</p>
+                        </div>
+                        <div className="projects">
+                            <div className="projects-heading">
                                 <a href="https://napoliclubbapp.netlify.app/" target="_blank" rel="noopener noreferrer">
                                     <img src={soccerImg} alt="Football Club Management System" className="projects-image" />
                                 </a>
@@ -110,33 +138,6 @@ function Main() {
                                 scheduling of events, and management dashboards.<br></br> The app streamlines communication, 
                                 record-keeping, and club management, making it easier for clubs to organize activities and 
                                 engage with their members.</p>
-                        </div>
-                        <div className="projects">
-                            <div className="projects-heading">
-                                <a href="https://tapedeck.netlify.app/staxxluciano" target="_blank" rel="noopener noreferrer">
-                                    <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
-                                </a>
-                                <h3 className="projects-heading">Artist/Band Website Generator</h3>
-                            </div>
-                            <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
-                                professional web pages.<br></br> Artists can showcase music videos, albums, and press kits, update their 
-                                profiles, and share streaming links—all without needing coding skills. <br></br>
-                                The app also provides secure login, admin dashboards, and tools for uploading and organizing content,
-                                 making it simple for artists to promote their work and connect with fans online.</p>
-                        </div>
-                        <div className="projects">
-                            <div className="projects-heading">
-                                <a href="https://cast-solutions.netlify.app/login" target="_blank" rel="noopener noreferrer">
-                                    <img src={castImg} alt="cast-solutions" className="projects-image" />
-                                </a>
-                                <h3 className="projects-heading">Cast Solutions</h3>
-                            </div>
-                            <p>Cast Solutions is a web application that helps casting agencies and talent managers organize auditions, 
-                                manage talent submissions, and streamline the casting process.<br></br> The platform allows you to create and 
-                                manage audition lists, receive detailed talent submissions (including images and videos), 
-                                mark favorites, and easily share or present shortlisted candidates. <br></br>
-                                With secure authentication and a user-friendly interface, Cast Solutions simplifies audition 
-                                management and enhances collaboration between agencies and talent.</p>
                         </div>
                     </div>
         },
