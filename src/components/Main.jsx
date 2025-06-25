@@ -114,9 +114,9 @@ function Main() {
                         </div>
                         <div className="projects">
                             <div className="projects-heading">
-                                <Link to="/tapedeck">
+                                <a href="https://tapedeck.netlify.app/" target="_blank" rel="noopener noreferrer">
                                     <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
-                                </Link>
+                                </a>
                                 <h3 className="projects-heading">Artist/Band Website Generator</h3>
                             </div>
                             <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
