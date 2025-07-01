@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import NavBar from "./NavBar";
@@ -16,6 +16,24 @@ import resumeimg from "../assets/resumeimg.JPG";
 
 function Main() {
     const [openSection, setOpenSection] = useState(null);
+    const bannerRefs = useRef([]);
+
+    useEffect(() => {
+        const banners = bannerRefs.current.slice();
+
+        banners.forEach((img) => {
+            if (img) img.classList.add("animate-once");
+        });
+        const removeClass = (e) => e.target.classList.remove("animate-once");
+        banners.forEach((img) => {
+            if (img) img.addEventListener("animationend", removeClass);
+        });
+        return () => {
+            banners.forEach((img) => {
+                if (img) img.removeEventListener("animationend", removeClass);
+            });
+        };
+    }, []);
 
     const sections = [
         {
@@ -192,16 +210,16 @@ function Main() {
                                 <p>React</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/typescript--v1.png" alt="typescript--v1"/>
-                                <p>TypeScript</p>
-                            </div>
-                            <div className="skill-item">
                                 <img width="45" height="45" src="https://img.icons8.com/color/45/css3.png" alt="css3"/>
                                 <p>CSS</p>
                             </div>
                             <div className="skill-item">
                                 <img width="45" height="45" src="https://img.icons8.com/fluency/45/node-js.png" alt="node-js"/>
                                 <p>Node.js</p>
+                            </div>
+                             <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/express-js.png" alt="express-js"/>
+                                <p>Express.js</p>
                             </div>
                             <div className="skill-item">
                                 <img width="45" height="45" src="https://img.icons8.com/ios/45/api-settings.png" alt="api-settings"/>
@@ -216,16 +234,8 @@ function Main() {
                                 <p>Django</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/external-soft-fill-juicy-fish/45/external-dev-coding-and-development-soft-fill-soft-fill-juicy-fish.png" alt="external-dev-coding-and-development-soft-fill-soft-fill-juicy-fish"/>
-                                <p>DevOps & Cloud</p>
-                            </div>
-                            <div className="skill-item">
                                 <img width="45" height="45" src="https://img.icons8.com/fluency/45/github.png" alt="github"/>
                                 <p>GitHub</p>
-                            </div>
-                            <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/docker.png" alt="docker"/>
-                                <p>Docker</p>
                             </div>
                         </div>
                         <h3>Experience</h3>
@@ -288,9 +298,10 @@ function Main() {
                         <source src={pcvideo} type="video/mp4" />
                     </video>
                 </div>
-                {sections.map(section => (
+                {sections.map((section, idx) => (
                     <div className="container" key={section.key} id={section.key}>
                         <img
+                            ref={el => bannerRefs.current[idx] = el}
                             src={section.img}
                             alt={section.alt}
                             className="section-banner"
