@@ -128,9 +128,9 @@ function Footer() {
             <div className="footer-contact">
                 <div className="footer-text">
                     <a href="tel:0629973007" className="footer-icon" title="Call">
-                        <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/smartphone.png" alt="smartphone"/>
+                        <img width="30" height="30" src="https://img.icons8.com/ios/30/C52727/smartphone--v1.png" alt="smartphone--v1"/>
                     </a>
-                    <p>0629973007</p>
+                    <p> 0629973007</p>
                 </div>
                 <div className="footer-text">
                     <a
@@ -140,21 +140,21 @@ function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/whatsapp-logo.png" alt="whatsapp-logo" className="footer-icon"/>
+                        <img width="30" height="30" src="https://img.icons8.com/ios/30/C52727/whatsapp.png" alt="whatsapp"/>
                     </a>
-                    <p>WhatsApp Me</p>
+                    <p> WhatsApp Me</p>
                 </div>
                 <div className="footer-text">
                     <a href="mailto:martinmasekodev@gmail.com" className="footer-icon" title="Email">
-                        <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/gmail.png" alt="gmail" className="footer-icon"/>
+                        <img width="30" height="30" src="https://img.icons8.com/sf-regular-filled/30/c52727/new-post.png" alt="new-post"/>
                     </a>
-                    <p>Email Me</p>
+                    <p> Email Me</p>
                 </div>
                 <div className="footer-text">
                     <a href="https://www.linkedin.com/in/martin-maseko-a76762367/" target="_blank" rel="noopener noreferrer" className="footer-icon">
-                        <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/linkedin--v2.png" alt="linkedin--v2" className="footer-icon"/>
+                        <img width="30" height="30" src="https://img.icons8.com/ios/30/c52727/linkedin.png" alt="linkedin"/>
                     </a>
-                    <p>LinkedIn</p>
+                    <p> LinkedIn</p>
                 </div>
             </div>
         </div>

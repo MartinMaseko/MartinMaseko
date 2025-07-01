@@ -37,10 +37,30 @@ nav {
     display: none; 
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(.8,0,1,1);
+  }
+  50% {
+    transform: translateY(-20px);
+    animation-timing-function: cubic-bezier(0,0,.2,1);
+  }
+}
+
 .section-banner {
     width: 100%;
     height: auto;
-    cursor: pointer; 
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.section-banner:active {
+  animation: bounce 0.7s;
+}
+
+.section-banner.animate-once {
+  animation: bounce 0.7s;
 }
 
 .services-content {
@@ -497,6 +517,11 @@ nav {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
+    }
+
+    .section-banner:hover,
+    .section-banner:active {
+    animation: bounce 0.7s;
     }
 
 }
