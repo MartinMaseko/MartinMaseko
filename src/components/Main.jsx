@@ -10,7 +10,7 @@ import projects from "../assets/projects.png";
 import mobilegif from "../assets/homemobile.gif";
 import pcvideo from "../assets/homePC.mp4";
 import soccerImg from "../assets/soccer.png";
-import tapeImg from "../assets/tape.png";
+import localsZA from "../assets/localsza.webp";
 import castImg from "../assets/cast.png";
 import resumeimg from "../assets/resumeimg.JPG";
 
@@ -41,30 +41,32 @@ function Main() {
             img: About,
             alt: "About Me",
             title: "Your Digital Growth Partner",
-            content: <p>As a seasoned entrepreneur with 12 years of experience and a diverse background spanning from wholesale, 
-                government projects, and direct B2B sales, I bring a unique blend of street-smart 
-                business acumen and cutting-edge digital expertise to the table. 
-                My journey began straight out of high school, building a hair product 
-                wholesale business that supplied over 500 salons in the township – a testament 
-                to my innate understanding of market needs and scalable operations.<br></br><br></br> 
-                I then transitioned to managing a significant government project for the Department of Human Settlements, 
-                where I honed my skills in project management, data integrity, and community engagement, 
-                even training local staff on specialized software. This was followed by a successful venture 
-                in direct sales, supplying township spaza shops and perfecting my approach to 
-                business-to-business sales.<br></br><br></br>My entrepreneurial drive has always been fueled by my passion to fund my music career.
-                Later I produced two kwaito albums and Hip Hop E.p including selling instrumentals online I delved into the music industry 
-                as an artist "Staxx Luciano", Sound engineer & producer and manager running artist marketing campaigns & events.<br></br><br></br>
-                This pursuit led me to deeply explore the intersection of technology and the music industry, 
-                from the evolution of music consumption to the power of digital platforms. 
-                This curiosity sparked a career pivot, where I leveraged my natural entrepreneurial skills and 
-                acquired extensive knowledge in social media marketing , web analytics , and more recently, full-stack development.<br></br><br></br>
-                This diverse practical experience and continuous learning enable me to see the bigger picture. 
-                I can quickly assess your business, identify the most impactful tech tools and resources to 
-                boost efficiency and revenue, and strategize how to effectively drive traffic. 
-                What truly sets me apart is my ability to dive into your data, refining strategies for 
-                optimal results.<br></br><br></br> I'm passionate about SaaS solutions, the transformative power of music 
-                industry technology, and empowering SME businesses to thrive in today's rapidly evolving 
-                digital landscape. Let's unlock your business's full potential together.</p>
+            content: <p>As a seasoned entrepreneur with over 12 years of hands-on experience, 
+                my career has been dedicated to mastering scalable operations, 
+                supply chain logistics, and direct B2B sales within the South African informal sector.
+                <br></br><br></br> 
+
+                My journey began with a wholesale hair product business that grew to supply over 500 township salons—
+                a testament to my innate understanding of market needs, procurement challenges, and community-centric business models. 
+                This was followed by pivotal roles in government project management where I refined my skills in data integrity, 
+                project oversight, and community training, and successful ventures in direct B2B sales to township spaza shops.
+                <br></br><br></br>
+
+                This diverse practical background—combined with an intense focus on cutting-edge digital expertise—culminated 
+                in the creation of LOCALS.ZA.
+                <br></br><br></br>
+
+                I personally conceived and developed the LOCALS.ZA digital platform, an innovative solution designed to empower 
+                small and micro-businesses. Leveraging my extensive knowledge in full-stack development, social media marketing, 
+                and web analytics, I engineered a robust system that solves the core problems of fragmented procurement and 
+                logistical challenges in the informal sector.
+                <br></br><br></br>
+
+                I am passionate about the transformative power of SaaS solutions and committed to empowering SME businesses 
+                to thrive by giving them the digital tools and economies of scale needed to compete effectively in today's 
+                rapidly evolving landscape. Let's unlock your business's full potential together.
+                <br></br><br></br>
+            </p>
         },
         {
             key: "services",
@@ -116,6 +118,20 @@ function Main() {
             alt: "Projects",
             title: "SaaS Products",
             content: <div className="projects-content">
+                <div className="projects">
+                            <div className="projects-heading">
+                                <a href="https://locals-za.co.za/" target="_blank" rel="noopener noreferrer">
+                                    <img src={localsZA} alt="localsZA-image" className="projects-image" />
+                                </a>
+                                <h3 className="projects-heading">LocalsZA</h3>
+                            </div>
+                            <p>LocalsZA is a full‑stack ecommerce and logistics PWA built to connect local shops, wholesalers and drivers. 
+                                The frontend is a Vite + React + TypeScript (componentized by pages: storefront, product view, cart, 
+                                admin dashboard, drivers) with Context APIs for Cart, Favorites and Waze routing. 
+                                The backend is Node/Express using the Firebase Admin SDK for secure Firestore reads/writes and Storage for product images. 
+                                Payments are handled via a PayFast service (server‑side signature generation and verification).
+                            </p>
+                        </div>
                         <div className="projects">
                             <div className="projects-heading">
                                 <Link to="/cast-solutions">
@@ -129,19 +145,6 @@ function Main() {
                                 mark favorites, and easily share or present shortlisted candidates. <br></br>
                                 With secure authentication and a user-friendly interface, Cast Solutions simplifies audition 
                                 management and enhances collaboration between agencies and talent.</p>
-                        </div>
-                        <div className="projects">
-                            <div className="projects-heading">
-                                <a href="https://tapedeck.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <img src={tapeImg} alt="tapedeck-image" className="projects-image" />
-                                </a>
-                                <h3 className="projects-heading">Artist/Band Website Generator</h3>
-                            </div>
-                            <p>TapeDeck is a platform that empowers musicians and artists to easily create and manage their own 
-                                professional web pages.<br></br> Artists can showcase music videos, albums, and press kits, update their 
-                                profiles, and share streaming links—all without needing coding skills. <br></br>
-                                The app also provides secure login, admin dashboards, and tools for uploading and organizing content,
-                                 making it simple for artists to promote their work and connect with fans online.</p>
                         </div>
                         <div className="projects">
                             <div className="projects-heading">
@@ -175,19 +178,16 @@ function Main() {
                     </a>
                 </div>
                         <h3>PROFILE</h3>
-                        <p>Driven and adaptive professional with 12 years of
-                            entrepreneurial experience,
-                            now successfully transitioning into software development. My
-                            extensive entrepreneurial experience has cultivated
-                            exceptional problem-solving, sales acumen, communication,
-                            and project management
-                            capabilities, enabling me to contribute effectively as an
-                            intrapreneur within an organization.
+                        <p>Driven Full Stack Developer with experience in React.js, Node.js, and Next.js, currently developing a digital
+                            sales and last mile delivery platform with proven abilities in API design & integrations, database management,
+                            end-to-end deployment and payment gateway integrations. Combining my technical skills to solve real world
+                            business problems around me and with 12 years of experience in sales, web analytics, social media marketing
+                            and business operations experience, bringing other complimentary and soft skills to teams or companies.
                         </p>
                         <h3>EDUCATION</h3>
                         <h4>Software Engineering | Mar 2024 - Nov 2024</h4>
                         <p>HyperionDev</p>
-                        <h4>Front-End Development | Dec 2024 - May 2025</h4>
+                        <h4>Full-Stack Development | Dec 2024 - July 2025</h4>
                         <p>Scrimba</p>
                         <h4>Social Media Marketing | Apr 2019 - Mar 2020</h4>
                         <p>Digital School of Marketing</p>
@@ -198,58 +198,65 @@ function Main() {
                         <h3>Skills</h3>
                         <div className="skills-container">
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/3d-fluency/45/source-code.png" alt="source-code"/>
-                                <p>HTML</p>
-                            </div>
-                            <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/color/45/javascript--v1.png" alt="javascript--v1"/>
-                                <p>JavaScript</p>
-                            </div>
-                            <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/45/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"/>
+                                <img width="45" height="45" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/45/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="react-img"/>
                                 <p>React</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/color/45/css3.png" alt="css3"/>
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/48/typescript--v1.png" alt="typescript-img"/>
+                                <p>TypeScript</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/javascript--v1.png" alt="javascript-img"/>
+                                <p>JavaScript</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/windows/45/node-js.png" alt="nodejs-img"/>
+                                <p>Node.js</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/clouds/45/api.png" alt="api-img"/>
+                                <p>API</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/vite.png" alt="vite-img"/>
+                                <p>Vite</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/ios/45/html.png" alt="HTML-img"/>
+                                <p>HTML</p>
+                            </div>
+                            <div className="skill-item">
+                                <img width="45" height="45" src="https://img.icons8.com/color/45/css3.png" alt="css-img"/>
                                 <p>CSS</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/node-js.png" alt="node-js"/>
-                                <p>Node.js</p>
-                            </div>
-                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/color/45/express-js.png" alt="express-js"/>
-                                <p>Express.js</p>
+                                <img width="45" height="45" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/external-ui-design-computer-science-flaticons-lineal-color-flat-icons.png" alt="UI-img"/>
+                                <p>UI Design</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/ios/45/api-settings.png" alt="api-settings"/>
-                                <p>RESTful API</p>
+                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/web-analystics.png" alt="web-analytics-img"/>
+                                <p>Web Analytics</p>
                             </div>
                             <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/color/45/python--v1.png" alt="python--v1"/>
-                                <p>Python</p>
-                            </div>
-                            <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/45/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" alt="external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo"/>
-                                <p>Django</p>
-                            </div>
-                            <div className="skill-item">
-                                <img width="45" height="45" src="https://img.icons8.com/fluency/45/github.png" alt="github"/>
-                                <p>GitHub</p>
+                                <img width="45" height="45" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/45/external-social-media-marketing-marketing-technology-flaticons-lineal-color-flat-icons-5.png" alt="social-img"/>
+                                <p>Social Media Marketing</p>
                             </div>
                         </div>
                         <h3>Experience</h3>
+                        <div className="experience-item">
+                        <h4>Full Stack Developer | June 2025 – Present</h4>
+                            <ul>
+                                <li>Developed and shipped full‑stack features for LocalsZA, including an admin management dashboard
+                                    tracking business KPI’s and CRUD features , shared-cart sharing, and PayFast payment integration.
+                                </li>
+                                <li>Built reusable React + TypeScript components and context to manage app state and UX flows.</li>
+                                <li>Integrated Firebase and authored backend controllers/services for secure API logic</li>
+                                <li>Integrated PWA features: Workbox-based service worker, asset caching, lazy loading, and responsive
+                                    grid for large screens and analytics hooks instrumented at interaction points
+                                </li>
+                            </ul>
+                        </div>
                         <div className="experience-container">
-                            <div className="experience-item">
-                                <h4>Sales & Business Operations Manager | 2013 - 2016</h4>
-                                <p>Successfully scaled a Hair products wholesale
-                                    business, serving over 500 salons. I'm adept at
-                                    inventory management, optimizing sales, and
-                                    leading small teams and translating complex
-                                    business needs into actionable, profitable strategies.
-                                    HerrKhonact (Pty) Ltd
-                                </p>
-                            </div>
                             <div className="experience-item">
                                 <h4>Training & Project Coordinator | 2016 - 2017 </h4>
                                 <p>Conducted occupancy audits (verification of rightful
@@ -262,13 +269,13 @@ function Main() {
                                 </p>
                             </div>
                             <div className="experience-item">
-                                <h4>Music Production & Sound Engineering | 2018 - 2023 </h4>
-                                <p>Managed and operated a successful recording
-                                    studio, delivering professional music production
-                                    services including recording, mixing, and mastering
-                                    for diverse artists. I also provided digital marketing
-                                    services to artists & sold Instrumentals online
-                                    generating over R50K in 2023.
+                                <h4>Sales & Business Operations Manager | 2013 - 2017</h4>
+                                <p>Successfully scaled a Hair products wholesale
+                                    business, serving over 500 salons. I'm adept at
+                                    inventory management, optimizing sales, and
+                                    leading small teams and translating complex
+                                    business needs into actionable, profitable strategies.
+                                    HerrKhonact (Pty) Ltd
                                 </p>
                             </div>
                         </div>
@@ -290,8 +297,8 @@ function Main() {
 
     return (
         <>
-            <NavBar onMenuClick={handleMenuClick} />
             <div className="main">
+                <NavBar onMenuClick={handleMenuClick} />
                 <div className="heading-container">
                     <img src={mobilegif} alt="Mobile Animation" className="mobile-gif" />
                     <video autoPlay loop muted className="pc-video">

@@ -11,8 +11,9 @@ body, #root {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 .Navlogo {
@@ -24,13 +25,14 @@ nav {
 .mobile-banner {
     width: 100%;
     height: auto;
-    box-shadow: 0 0 16px rgba(0,0,0,0.10); 
+    box-shadow: 0 0 16px rgba(0,0,0,0.10);
 }
 
 .mobile-gif {
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .pc-video {
@@ -50,6 +52,7 @@ nav {
 
 .section-banner {
     width: 100%;
+
     height: auto;
     cursor: pointer;
     transition: transform 0.2s; 
@@ -91,6 +94,8 @@ nav {
     cursor: pointer;
     padding: 30px;
     box-shadow: 0 0 16px rgba(0,0,0,0.10);
+    max-width: 100%;
+     
 }
 
 .projects-image:hover {
