@@ -8,6 +8,10 @@ body, #root {
     flex-direction: column;
 }
 
+.main {
+    min-width: 100vw;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -473,7 +477,7 @@ nav {
     }
     .pc-video {
         display: block;
-        width: 100%;
+        width: 100vw;
         height: auto; 
     }
 

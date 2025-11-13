@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import Logo from "../assets/MMLogo512.webp";
 
 function NavBar({ onMenuClick }) {
     const [open, setOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const handleMenuClick = () => setOpen(!open);
 
@@ -15,12 +16,29 @@ function NavBar({ onMenuClick }) {
         if (el) el.scrollIntoView({ behavior: "smooth" });
     };
 
+    // Close menu
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setOpen(false);
+            }
+        };
+
+        if (open) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [open]);
+
     return (
         <nav className="navbar">
             <Link to="/" className="nav-link">
                 <img src={Logo} alt="Logo" className="Navlogo" />
             </Link>
-            <div className="menu-wrapper">
+            <div className="menu-wrapper" ref={menuRef}>
                 <img
                     width="35"
                     height="35"
