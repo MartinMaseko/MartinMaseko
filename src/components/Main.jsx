@@ -258,7 +258,7 @@ function Main() {
                         </div>
                         <div className="experience-container">
                             <div className="experience-item">
-                                <h4>Training & Project Coordinator | 2016 - 2017 </h4>
+                                <h4>Training & Project Coordinator | 2018 - 2020 </h4>
                                 <p>Conducted occupancy audits (verification of rightful
                                     owners of RDP houses in various
                                     townships a project by the Department of Human
