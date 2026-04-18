@@ -1,63 +1,72 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
-import Logo from "../assets/MMLogo512.webp";
 
-function NavBar({ onMenuClick }) {
-    const [open, setOpen] = useState(false);
-    const menuRef = useRef(null);
+const NAV_ITEMS = [
+    { label: "About",     id: "about",     path: "/about" },
+    { label: "Portfolio", id: "portfolio", path: "/portfolio" },
+    { label: "Skills",    id: "skills",    path: "/skills" },
+    { label: "Contact",   id: "contact",   path: "/contact" }
+];
 
-    const handleMenuClick = () => setOpen(!open);
+function NavBar({ onNavClick }) {
+    const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
 
-    const handleNavClick = (target) => {
-        setOpen(false);
-        if (onMenuClick) onMenuClick(target);
-        const el = document.getElementById(target);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
+    const handleClick = (item) => {
+        setIsOpen(false);
+        if (onNavClick) {
+            onNavClick(item.id);
+        } else {
+            navigate(item.path);
+        }
     };
 
-    // Close menu
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-                setOpen(false);
-            }
-        };
-
-        if (open) {
-            document.addEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [open]);
-
     return (
-        <nav className="navbar">
-            <Link to="/" className="nav-link">
-                <img src={Logo} alt="Logo" className="Navlogo" />
-            </Link>
-            <div className="menu-wrapper" ref={menuRef}>
-                <img
-                    width="35"
-                    height="35"
-                    src="https://img.icons8.com/ios-glyphs/35/535353/menu--v3.png"
-                    alt="menu--v3"
-                    className="menu-icon"
-                    onClick={handleMenuClick}
-                    style={{ cursor: "pointer" }}
+        <>
+            {/* Backdrop — mobile only, closes menu on tap */}
+            {isOpen && (
+                <div
+                    className="nav-backdrop"
+                    onClick={() => setIsOpen(false)}
+                    aria-hidden="true"
                 />
-                {open && (
-                    <div className="dropdown-menu">
-                        <button className="dropdown-item" onClick={() => handleNavClick("about")}>About</button>
-                        <button className="dropdown-item" onClick={() => handleNavClick("services")}>Services</button>
-                        <button className="dropdown-item" onClick={() => handleNavClick("projects")}>SaaS</button>
-                        <button className="dropdown-item" onClick={() => handleNavClick("resume")}>Resume</button>
-                    </div>
+            )}
+
+            {/* Hamburger / close toggle — mobile only */}
+            <button
+                className="nav-hamburger"
+                onClick={() => setIsOpen((prev) => !prev)}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
+            >
+                {isOpen ? (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="22" height="22">
+                        <line x1="4" y1="4" x2="20" y2="20" />
+                        <line x1="20" y1="4" x2="4" y2="20" />
+                    </svg>
+                ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="22" height="22">
+                        <line x1="3" y1="7" x2="21" y2="7" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="17" x2="21" y2="17" />
+                    </svg>
                 )}
+            </button>
+
+            {/* Nav menu */}
+            <div className={`dropdown-menu-options${isOpen ? " nav-open" : ""}`}>
+                {NAV_ITEMS.map((item) => (
+                    <button
+                        key={item.id}
+                        className="dropdown-item"
+                        onClick={() => handleClick(item)}
+                    >
+                        {item.label}
+                    </button>
+                ))}
             </div>
-        </nav>
+        </>
     );
 }
 
