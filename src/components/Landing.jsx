@@ -5,7 +5,6 @@ import professor from "../assets/professor.jpg";
 import studio from "../assets/studio.jpg";
 import localsLogo from "../assets/localsLogo.png";
 import localsHandGif from "../assets/LocalsHandgif.gif";
-import yourpriceHand from "../assets/yourpricehand.png";
 import NavBar from "./NavBar";
 import "./Landing.css";
 
