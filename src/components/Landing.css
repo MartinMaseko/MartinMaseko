@@ -1,10 +1,11 @@
 /* =============================================
-   Landing Page — Sticky Section Stack + Parallax Zoom
-   Each section slides over the one above it (depth layers).
+   Landing Page — Normal-flow sections + Parallax Zoom
+   Sections stack in regular document flow; the nav
+   smooth-scrolls to each one by id.
    Hero text zooms in and flies out of frame on scroll.
    ============================================= */
 
-/* ---- Wrapper — height = number of sections × 100vh ---- */
+/* ---- Wrapper ---- */
 .landing-wrapper {
     position: relative;
 }
@@ -43,12 +44,11 @@
     );
 }
 
-/* ---- Base section — sticky + full viewport ---- */
+/* ---- Base section — normal flow, at least one viewport tall ---- */
 .landing-section {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
+    position: relative;
+    z-index: 1; /* above the fixed background */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,21 +56,15 @@
 
 /* ── Hero: transparent so the parallax bg shows through ── */
 .landing-hero-section {
-    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* ── Content sections: each stacks over the one before it ── */
+/* ── Content sections ── */
 .landing-content-section {
     background: rgba(8, 8, 14, 0.96);
-    /* Top shadow sells the "physical layer on top" depth illusion */
     box-shadow: 0 -24px 80px rgba(0, 0, 0, 0.75);
 }
-
-#about    { z-index: 2; }
-#services { z-index: 3; }
-#portfolio { z-index: 4; }
-#skills   { z-index: 5; }
-#contact  { z-index: 6; }
 
 /* ---- Hero text (JS drives the zoom-in-out-of-frame) ---- */
 .landing-hero-text {
@@ -123,18 +117,14 @@
     50%       { transform: translateY(8px); opacity: 0.85; }
 }
 
-/* ---- Section inner — scrollable if content exceeds vh ---- */
+/* ---- Section inner — grows with its content ---- */
 .landing-section-inner {
     width: 100%;
     max-width: 920px;
     padding: 48px 28px 110px;
     color: #fff;
-    max-height: 100vh;
-    overflow-y: auto;
-    scrollbar-width: none;
     box-sizing: border-box;
 }
-.landing-section-inner::-webkit-scrollbar { display: none; }
 
 .landing-section-heading {
     font-family: var(--font-vt323), monospace;

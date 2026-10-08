@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import aboutBanner from "../assets/aboutBanner.jpg";
-import spikiri from "../assets/spikiri.jpg";
-import professor from "../assets/professor.jpg";
-import studio from "../assets/studio.jpg";
 import localsLogo from "../assets/localsLogo.png";
-import localsHandGif from "../assets/LocalsHandgif.gif";
 import NavBar from "./NavBar";
 import "./Landing.css";
+
+const heroBanner = "https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/heroBanner.webp?alt=media&token=a60e0099-9eca-44c9-a656-555e3d9b263c";
+const localsHand = "https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/LocalsHand.png?alt=media&token=f84200d8-dad7-49a0-9dc3-19f8596fae0c";
 
 function Landing() {
     const bgRef = useRef(null);
@@ -41,14 +39,9 @@ function Landing() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Each section is exactly 100vh. Sticky elements mislead scrollIntoView,
-    // so we calculate the target position from section order directly.
-    const SECTION_INDEX = { about: 1, portfolio: 2, skills: 3, contact: 4 };
-
+    // Sections are in normal document flow, so scroll straight to the element.
     const scrollToSection = (id) => {
-        const index = SECTION_INDEX[id];
-        if (index === undefined) return;
-        window.scrollTo({ top: index * window.innerHeight, behavior: "smooth" });
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
     const scrollToTop = () => {
@@ -75,7 +68,7 @@ function Landing() {
                 <div
                     ref={bgRef}
                     className="landing-bg"
-                    style={{ backgroundImage: `url(${aboutBanner})` }}
+                    style={{ backgroundImage: `url(${heroBanner})` }}
                 />
                 <div className="landing-overlay" />
             </div>
@@ -84,11 +77,11 @@ function Landing() {
             <section className="landing-section landing-hero-section">
                 <div ref={heroTextRef} className="landing-hero-text">
                     <h1 className="landing-hero-heading">Martin Maseko</h1>
-                    <p className="landing-tagline">Developer & Data Engineer &nbsp;·&nbsp; Strategist &nbsp;·&nbsp; Creative</p>
+                    <p className="landing-tagline">Full Stack Developer & Data Engineer &nbsp;·&nbsp; Strategist &nbsp;·&nbsp; Creative</p>
                 </div>
             </section>
 
-            {/* ── About ── slides over hero from below */}
+            {/* ── About ── */}
             <section id="about" className="landing-section landing-content-section">
                 <div className="landing-section-inner">
                     <h2 className="landing-section-heading">About</h2>
@@ -109,12 +102,18 @@ function Landing() {
                             Anything to keep the dream alive and in 2023 I generated over R50k in instrumental sales, released a mixtape "Its Not 4U, It's 4 Hustlers Vol.1", had the oppportunity to work with professor
                             and Spikiri. Thats the same year when I stopped music...
                         </p>
+
+                        <div className="landing-about-photos">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/snymaanProduct.webp?alt=media&token=3916b04f-ccf9-49b2-a4a3-371df06f78b1" alt="Snymaan product" className="landing-about-photo" />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/snymaanPromo.webp?alt=media&token=b17d8a3b-1b0c-4983-a129-34e2f46d9fae" alt="Snymaan promo" className="landing-about-photo" />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/C24.png?alt=media&token=eb4937b6-0162-4205-b4c7-beb49ff53aa8" alt="C24" className="landing-about-photo" />
+                        </div>
                         <iframe width="100%" height="415" src="https://www.youtube.com/embed/3uOC0b5M85I?si=zFsabIHG0yQzCQBz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
                         <div className="landing-about-photos">
-                            <img src={spikiri} alt="In the studio with Spikiri" className="landing-about-photo" />
-                            <img src={professor} alt="In the studio with Professor" className="landing-about-photo" />
-                            <img src={studio} alt="Producing in the studio" className="landing-about-photo" />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/spikiri.jpg?alt=media&token=94f9c536-de0a-43af-90c0-2e800247a4f4" alt="In the studio with Spikiri" className="landing-about-photo" />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/professor.jpg?alt=media&token=b273199d-28bc-4821-ac96-59b1014753c9" alt="In the studio with Professor" className="landing-about-photo" />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/martinmasekoprofile.firebasestorage.app/o/studio.jpg?alt=media&token=fb7a2fdb-f486-43cb-93d2-34e17430cfdf" alt="Producing in the studio" className="landing-about-photo" />
                         </div>
 
                         <h3 className="landing-about-subheading">From Sound Waves to Software</h3>
@@ -125,16 +124,14 @@ function Landing() {
                             landscape made me want to understand the "how" and "why" behind the platforms.
                         </p>
                         <p>
-                            I took a leap into software engineering with HyperionDev, which opened a door
-                            I never plan to close. Today, I'm a certified Software Engineer and Full
-                            Stack Developer specializing in ASP.NET Core. My background as a creative & an entrepreneur
+                            I took a leap into software engineering then moved into data engineering. Today, I'm a certified Full Stack Developer & Data Engineer. My background as a creative & an entrepreneur
                             allows me to bridge the gap between technical logic and human-centric applications.
                         </p>
 
                         <h3 className="landing-about-subheading">Where I'm Heading</h3>
                         <p>
                             I am currently deepening my expertise by studying Supply Chain Management and
-                            Data Analytics. My mission is to build the systems and markets that enable
+                            Data Engineering. My mission is to build the systems and markets that enable
                             local economies to flourish and leverage applications to scale. I believe that by merging a strategist's
                             mindset with technical execution, we can protect and grow local economies and combat unemployment in local communities.
                         </p>
@@ -146,7 +143,7 @@ function Landing() {
                 </div>
             </section>
 
-            {/* ── Portfolio ── slides over Services */}
+            {/* ── Portfolio ── */}
             <section id="portfolio" className="landing-section landing-content-section">
                 <div className="landing-section-inner">
                     <h2 className="landing-section-heading">Portfolio</h2>
@@ -161,7 +158,7 @@ function Landing() {
                         </div>
                         <div className="landing-portfolio-item">
                             <div className="landing-portfolio-thumb">
-                                <img src={localsHandGif} alt="Locals ZA Store" className="landing-portfolio-img" />
+                                <img src={localsHand} alt="Locals ZA Store" className="landing-portfolio-img" />
                             </div>
                             <h3>Locals ZA — PWA</h3>
                             <p>Intergrated Solutions Market and Enterprise software provider
@@ -174,7 +171,7 @@ function Landing() {
                 </div>
             </section>
 
-            {/* ── Skills ── slides over Portfolio */}
+            {/* ── Skills ── */}
             <section id="skills" className="landing-section landing-content-section">
                 <div className="landing-section-inner">
                     <h2 className="landing-section-heading">Skills</h2>
@@ -205,7 +202,7 @@ function Landing() {
                 </div>
             </section>
 
-            {/* ── Contact ── slides over Skills */}
+            {/* ── Contact ── */}
             <section id="contact" className="landing-section landing-content-section">
                 <div className="landing-section-inner">
                     <h2 className="landing-section-heading">Contact</h2>
