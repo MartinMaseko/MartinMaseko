@@ -73,7 +73,7 @@ function Landing() {
                 <div className="landing-overlay" />
             </div>
 
-            {/* ── Hero ── transparent, shows the parallax bg */}
+            {/* ── Hero ──*/}
             <section className="landing-section landing-hero-section">
                 <div ref={heroTextRef} className="landing-hero-text">
                     <h1 className="landing-hero-heading">Martin Maseko</h1>
@@ -81,7 +81,7 @@ function Landing() {
                 </div>
             </section>
 
-            {/* ── About ── */}
+            {/* ── About ──*/}
             <section id="about" className="landing-section landing-content-section">
                 <div className="landing-section-inner">
                     <h2 className="landing-section-heading">About</h2>
