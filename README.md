@@ -1,12 +1,12 @@
 # Kamohelo Martin Maseko
 
-**Full-Stack .NET Developer | Azure & Microsoft Fabric Data Engineer** — Johannesburg, South Africa
+**Full-Stack .NET Developer | Data Engineer** — Johannesburg, South Africa
 
 [martinmasekodev.co.za](https://martinmasekodev.co.za) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/martin-maseko-a76762367) &nbsp;·&nbsp; martin@localsza.co.za
 
 ---
 
-I build and ship production systems end to end — backend, frontend, and the data pipeline underneath. Sole engineer of [LocalsZA](https://locals-za.co.za), a live delivery marketplace and field-sales analytics platform running on ASP.NET Core, React, and Azure. Microsoft Certified Fabric Data Engineer (DP-700). A decade running my own businesses before this gave me a sharp sense for delivery, cost, and what actually needs to ship.
+I build and ship production systems end to end — backend, frontend, and the data pipeline & analytics. Sole engineer of [LocalsZA](https://locals-za.co.za), a live delivery marketplace and field-sales analytics platform running on ASP.NET Core, React, and Azure. Microsoft Certified Fabric Data Engineer (DP-700). A decade running my own businesses before this gave me a sharp sense for delivery, cost, and what actually needs to ship.
 
 ---
 
